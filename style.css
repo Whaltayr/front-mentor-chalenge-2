@@ -1,0 +1,142 @@
+/* Import Google Fonts at the top */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+
+:root {
+  /* ===== Colors ===== */
+  --Red: hsl(0, 78%, 62%);
+  --Cyan: hsl(180, 62%, 55%);
+  --Orange: hsl(34, 97%, 64%);
+  --Blue: hsl(212, 86%, 64%);
+
+  /* Neutral */
+  --Grey-500: hsl(234, 12%, 34%);
+  --Grey-400: hsl(212, 6%, 44%);
+  --White: hsl(0, 0%, 100%);
+  --White-g: hsl(0, 0%, 97%);
+
+  /* ===== Typography ===== */
+  --Font-size-body: 15px;
+  --Font-family-base: "Poppins", sans-serif;
+  --Font-weight-light: 200;
+  --Font-weight-regular: 400;
+  --Font-weight-semibold: 600;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: var(--Font-family-base);
+  font-size: var(--Font-size-body);
+  font-weight: var(--Font-weight-regular);
+  color: var(--Grey-500);
+  background-color: var(--White-g);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.meta {
+  text-align: center;
+  padding: 1rem;
+  margin: 2rem 0 4rem 0;
+}
+.meta .meta-title {
+  font-family: "Poppins", sans-serif;
+  font-weight: 200;
+  color: var(--Grey-400);
+}
+.meta .meta-title2 {
+  margin-bottom: 5px;
+}
+.meta .meta-text {
+  font-size: var(--Font-size-body);
+  color: var(--Grey-400);
+  text-align: center;
+}
+
+.box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 300px);
+  grid-template-rows: repeat(8, 35px);
+  gap: 1.8rem;
+}
+
+.box1 {
+  grid-row: 3 / 7;
+  border-top: 3px solid var(--Blue);
+}
+.box2 {
+  grid-row: 1 / 5;
+  border-top: 3px solid var(--Red);
+}
+.box3 {
+  grid-row: 3 / 7;
+  border-top: 3px solid var(--Cyan);
+}
+.box4 {
+  grid-row: 5 / 9;
+  border-top: 3px solid var(--Orange);
+}
+
+.card-box {
+  background-color: var(--White);
+  border-radius: 10px;
+  padding: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.card-box .box-title {
+  font-size: 1rem;
+  text-align: start;
+  font-weight: var(--Font-weight-semibold);
+  margin: 0 0 0.7rem 0;
+}
+.card-box .box-text {
+  font-size: 0.9rem;
+  text-align: start;
+  color: var(--Grey-400);
+  line-height: 1.5;
+}
+.card-box .image {
+  width: 60px;
+  height: 60px;
+  margin-top: 20px;
+  align-self: flex-end;
+}
+.card-box img {
+  height: 40px;
+  width: 40px;
+}
+footer {
+  margin: 3rem 0 1rem 0;
+}
+@media (max-width: 920px) {
+    .box-wrapper {
+  display: grid;
+  grid-template-columns: repeat(1, 300px);
+  grid-template-rows: repeat(4, 250px);
+  gap: 1.8rem;
+}
+
+.box1 {
+  grid-row: 1;
+  border-top: 3px solid var(--Blue);
+}
+.box2 {
+  grid-row: 2;
+  border-top: 3px solid var(--Red);
+}
+.box3 {
+  grid-row: 3 ;
+  border-top: 3px solid var(--Cyan);
+}
+.box4 {
+  grid-row: 4;
+  border-top: 3px solid var(--Orange);
+}
+}
